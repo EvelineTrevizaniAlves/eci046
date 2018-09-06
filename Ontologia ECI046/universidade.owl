@@ -1,0 +1,360 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/EvelineTrevizaniAlves/universidade.owl#"
+     xml:base="https://github.com/EvelineTrevizaniAlves/universidade.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:universidade="https://github.com/EvelineTrevizaniAlves/universidade.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rua="https://github.com/EvelineTrevizaniAlves/universidade.owl#rua/">
+    <owl:Ontology rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#ensina -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#ensina">
+        <owl:inverseOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#ensinada_por"/>
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Professor"/>
+        <rdfs:range rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#ensinada_por -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#ensinada_por">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina"/>
+        <rdfs:range rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Professor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#estuda -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#estuda">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno"/>
+        <rdfs:range rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#bairro -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#bairro">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#cep -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#cep">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#cidade -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#cidade">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#cidade_de_nascimento -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#cidade_de_nascimento">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#complemento -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#complemento">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#cpf -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#cpf">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#data_de_nascimento -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#data_de_nascimento">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#estado -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#estado">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#idade -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#idade">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#matricula -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#matricula">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#nome_disciplina -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#nome_disciplina">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#nome_pessoa -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#nome_pessoa">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#número -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#número">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#sexo -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#sexo">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#sobrenome -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#sobrenome">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#telefone -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#telefone">
+        <rdfs:domain rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#rua/avenida -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#rua/avenida">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#endereço"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno -->
+
+    <owl:Class rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno">
+        <rdfs:subClassOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina -->
+
+    <owl:Class rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina"/>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Gestao -->
+
+    <owl:Class rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Gestao">
+        <rdfs:subClassOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Ontologia -->
+
+    <owl:Class rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Ontologia">
+        <rdfs:subClassOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa -->
+
+    <owl:Class rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Professor -->
+
+    <owl:Class rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Professor">
+        <rdfs:subClassOf rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno_1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno_1">
+        <rdf:type rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno"/>
+        <bairro rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liberdade</bairro>
+        <cep rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31270-290</cep>
+        <cidade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belo Horizonte</cidade>
+        <cidade_de_nascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franca</cidade_de_nascimento>
+        <complemento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aparmento 201</complemento>
+        <cpf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">115439946-01</cpf>
+        <data_de_nascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16/07/1994</data_de_nascimento>
+        <estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MG</estado>
+        <idade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</idade>
+        <matricula rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015113929</matricula>
+        <nome_pessoa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eveline</nome_pessoa>
+        <número rdf:datatype="http://www.w3.org/2001/XMLSchema#string">107</número>
+        <sexo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feminino</sexo>
+        <sobrenome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trevizani Alves</sobrenome>
+        <telefone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(35) 9 97420409</telefone>
+        <rua:avenida rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rua João Fernandes</rua:avenida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina_Onto -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Disciplina_Onto">
+        <rdf:type rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Ontologia"/>
+        <matricula rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECI 046</matricula>
+        <nome_disciplina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontologia</nome_disciplina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/EvelineTrevizaniAlves/universidade.owl#Professor_1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Professor_1">
+        <rdf:type rdf:resource="https://github.com/EvelineTrevizaniAlves/universidade.owl#Professor"/>
+        <cidade_de_nascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aegon</cidade_de_nascimento>
+        <cpf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">000133451-00</cpf>
+        <data_de_nascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/01/1958</data_de_nascimento>
+        <endereço rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nao se aplica</endereço>
+        <idade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60</idade>
+        <matricula rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0000000451</matricula>
+        <nome_pessoa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joao</nome_pessoa>
+        <sexo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masculino</sexo>
+        <sobrenome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">das Neves</sobrenome>
+        <telefone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nao se aplica</telefone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Aluno"/>
+            <rdf:Description rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Gestao"/>
+            <rdf:Description rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Ontologia"/>
+            <rdf:Description rdf:about="https://github.com/EvelineTrevizaniAlves/universidade.owl#Professor"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
